@@ -34,6 +34,33 @@ namespace RockPaperScissorsTests
 
 			Assert::AreEqual("Player1", result);
 		}
+		TEST_METHOD(InvalidFirstChoice_ReturnsInvalid)
+		{
+			const char* result = determineWinner("Banana", "Rock");
+
+			Assert::AreEqual("Invalid", result);
+		}
+
+		TEST_METHOD(InvalidSecondChoice_ReturnsInvalid)
+		{
+			const char* result = determineWinner("Rock", "Banana");
+
+			Assert::AreEqual("Invalid", result);
+		}
+
+		TEST_METHOD(BothChoicesInvalid_ReturnsInvalid)
+		{
+			const char* result = determineWinner("Banana", "Orange");
+
+			Assert::AreEqual("Invalid", result);
+		}
+
+		TEST_METHOD(SameInvalidChoices_ReturnsInvalid)
+		{
+			const char* result = determineWinner("Banana", "Banana");
+
+			Assert::AreEqual("Invalid", result);
+		}
 	};
 
 }
