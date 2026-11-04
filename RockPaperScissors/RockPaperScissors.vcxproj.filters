@@ -20,7 +20,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="rock_paper_sciccors.h">
+    <ClInclude Include="rock_paper_scissors.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
